@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Face Recognition</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/templates/css/bootstrap.css">
+    </head>
+
+    <style>
+.webcam{
+    width: 100%;
+    height: auto;
+}
+
+    </style>
+
+    <body>
+
+        <div class="container d-flex flex-column"/>
+
+        <h1 class="w-100">Face Recognition Live Demo Using Webcam</h1>
+
+        <section class="container d-flex">
+
+            <div class="w-50 p-2">
+                <img class="webcam" src="{{ url_for('video_feed') }}">
+            </div>
+
+            <div class="w-50 d-flex flex-column gap-2 p-2  justify-content-center">
+
+                <h2>Upload a face image to let computer recognize you.</h2>
+                
+                <form action="/upload" method="POST" enctype = "multipart/form-data">
+
+                    <div class="d-flex gap-2">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name"/>
+                    </div>
+    
+                    <div class="d-flex gap-2">
+                    <label for="image">Only Accept JPG, JPEG and PNG</label>
+                    <input type="file" id="image" name="file" accept="image/png, image/jpeg, image/jpg" />
+                    
+                    </div>
+    
+                    <div class="d-flex gap-2">
+                        <button type="submit">upload</button>
+                        <button type="button">refresh</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            
+
+        </section>
+
+
+        <section class="d-flex justify-content-center flex-column">
+            <h2>GE2340 - Course Project - 2023/2024 Semester A</h2>
+            <ul>
+                <li>C.H. Cheng</li>
+                <li>K.L. Wong</li>
+                <li>L.Y. Lee</li>
+                <li>Y.H. Wong</li>
+            </ul>
+        </section>
+
+        </div>
+
+        <script src="/templates/js/bootstrap.js" async defer></script>
+    </body>
+</html>
