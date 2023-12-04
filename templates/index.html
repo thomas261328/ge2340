@@ -35,12 +35,16 @@
                 
                 <form action="/upload" method="POST" enctype = "multipart/form-data">
 
+                    <!--
                     <div class="d-flex gap-2">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name"/>
                     </div>
-    
+                    -->
+                    <p>System will use filename as label.</p>
+
                     <div class="d-flex gap-2">
+                    
                     <label for="image">Only Accept JPG, JPEG and PNG</label>
                     <input type="file" id="image" name="file" accept="image/png, image/jpeg, image/jpg" />
                     
@@ -48,8 +52,10 @@
     
                     <div class="d-flex gap-2">
                         <button type="submit">upload</button>
-                        <button type="button">refresh</button>
+                        <!--<button type="button">refresh</button>-->
                     </div>
+
+                    <p>restart server to see result.</p>
 
                 </form>
 
